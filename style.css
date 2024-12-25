@@ -64,6 +64,13 @@ nav a.active {
     border-bottom: 3px solid #00ccf9;
 }
 
+.menu-toggle {
+    display: none;
+    font-size: 3rem;
+    cursor: pointer;
+    color: #00ccf9;
+}
+
 @media(max-width:995px) {
     nav {
         position: absolute;
@@ -94,6 +101,10 @@ nav a.active {
         padding: 1rem;
         border-radius: 0.5rem;
         border-bottom: 0.5rem solid #00ccf9;
+    }
+
+    .menu-toggle {
+        display: block;
     }
 }
 
