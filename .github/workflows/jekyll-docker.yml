@@ -22,13 +22,15 @@ jobs:
         with:
           node-version: '14'
 
-      # Add other necessary build steps here
+      # Ensure build steps generate output to './build' directory
+      - name: Build project
+        run: npm run build  # Example build command, replace as necessary
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: github-pages-${{ github.run_id }}
-          path: ./build
+          path: ./build  # Ensure this path is correct
 
   deploy:
     runs-on: ubuntu-latest
